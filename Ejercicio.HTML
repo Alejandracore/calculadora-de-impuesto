@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio</title>
+</head>
+<body>
+    <script>
+      console.log("Operacion");
+
+let nombre = "Calculo de sueldo";
+let sueldoMensual, sueldoAnual, excedente, impuestoAnual;
+
+sueldoMensual = parseFloat(prompt("Ingrese su sueldo mensual:"));
+
+sueldoAnual = sueldoMensual * 12;
+
+if (sueldoAnual <= 416220.00){
+
+    alert("ESTAS EXENTO A IMPUESTO POR RENTA")
+}
+
+
+else if (sueldoAnual > 416220.00 && sueldoAnual<= 624329.00){
+
+    let excedente = sueldoAnual - 416220;
+   let impuestoMensual = (excedente * 0.15)/12;
+   alert (" tu impuesto es igual a " + impuestoMensual)
+}
+
+
+else if (sueldoAnual > 624329.00 && sueldoAnual <= 867123.00){
+    let excedente = sueldoAnual - 624329.00;
+    let impuestoMensual =((excedente * 0.2) + 31216.00)/12
+    alert (" tu impuesto es igual a " + impuestoMensual)
+}
+
+else if ( sueldoAnual > 867123.00  ){
+
+    let excedente = sueldoAnual - 867123.00;
+    let impuestoMensual =((excedente *0.25 ) + 79776.00)/12
+    alert (" tu impuesto es igual a " + impuestoMensual)
+}
+   
+    </script>
+</body>
+</html>
